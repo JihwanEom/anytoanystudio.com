@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AnyToAny Studio</title>
-  <meta name="description" content="AnyToAny Studio builds privacy-first apps that help people understand video and speech in any language. Makers of SubLive.">
+  <meta name="description" content="AnyToAny Studio is an independent software studio in South Korea. We are building SubLive: subtitles on your iPhone, with optional Claude study notes planned next.">
   <meta property="og:title" content="AnyToAny Studio">
-  <meta property="og:description" content="Privacy-first apps that help people understand video and speech in any language.">
+  <meta property="og:description" content="Apps for understanding and learning from video. Meet SubLive, our iPhone app in development.">
   <meta property="og:url" content="https://anytoanystudio.com/">
   <meta property="og:type" content="website">
+  <link rel="canonical" href="https://anytoanystudio.com/">
   <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f0f12" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -22,6 +23,7 @@
       <a class="brand" href="./"><img src="assets/favicon.svg" alt="" width="30" height="30"><span>AnyToAny Studio</span></a>
       <nav class="nav">
         <a href="#products"><span data-lang="en">Products</span><span data-lang="ko">제품</span></a>
+        <a class="hide-sm" href="#about"><span data-lang="en">About</span><span data-lang="ko">소개</span></a>
         <a class="hide-sm" href="#contact"><span data-lang="en">Contact</span><span data-lang="ko">문의</span></a>
         <button class="lang-toggle" type="button">한국어</button>
       </nav>
@@ -29,17 +31,33 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="wrap">
+    <section class="hero studio-hero">
+      <div class="wrap studio-grid">
+        <div>
         <span class="eyebrow" data-lang="en">AnyToAny Studio · 애니투애니 스튜디오</span>
         <span class="eyebrow" data-lang="ko">애니투애니 스튜디오 · AnyToAny Studio</span>
-        <h1 data-lang="en">From any language,<br><span class="grad">to any language.</span></h1>
-        <h1 data-lang="ko">어떤 언어든,<br><span class="grad">내 언어로.</span></h1>
-        <p class="lede" data-lang="en">We build privacy-first apps that help people understand video and speech in any language. Our software runs on your own device, so what you watch stays yours.</p>
-        <p class="lede" data-lang="ko">애니투애니 스튜디오는 어떤 언어의 영상과 말도 이해할 수 있게 돕는 앱을 만듭니다. 처리는 사용자의 기기 안에서 하기 때문에, 보는 영상은 사용자에게만 남습니다.</p>
+        <h1 data-lang="en">Turn what you watch<br><span class="grad">into what you learn.</span></h1>
+        <h1 data-lang="ko">보는 영상이,<br><span class="grad">내 배움이 되도록.</span></h1>
+        <p class="lede" data-lang="en">We build apps that help people understand and learn from video in other languages. SubLive starts with subtitles and translation on your iPhone. Your audio and video stay on your device.</p>
+        <p class="lede" data-lang="ko">다른 언어의 영상을 이해하고 배우는 데 필요한 앱을 만듭니다. SubLive는 iPhone 안에서 자막과 번역을 만드는 것부터 시작합니다. 음성과 영상은 기기에 남습니다.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="sublive/"><span data-lang="en">Meet SubLive</span><span data-lang="ko">SubLive 보기</span> →</a>
           <a class="btn btn-ghost" href="mailto:hello@anytoanystudio.com">hello@anytoanystudio.com</a>
+        </div>
+        <p class="meta" data-lang="en">Independent studio in South Korea · Founded in 2026</p>
+        <p class="meta" data-lang="ko">한국의 독립 소프트웨어 스튜디오 · 2026년 시작</p>
+        </div>
+        <div class="journey">
+          <div class="journey-heading">
+            <img src="assets/sublive-icon.svg" alt="" width="44" height="44">
+            <div><strong>SubLive</strong><span data-lang="en">From watching to understanding</span><span data-lang="ko">시청에서 이해까지</span></div>
+          </div>
+          <ol class="journey-list">
+            <li><span class="journey-number">01</span><div><strong data-lang="en">Your video</strong><strong data-lang="ko">나의 영상</strong><p data-lang="en">Audio and video stay on your iPhone.</p><p data-lang="ko">음성과 영상은 iPhone에 남습니다.</p></div></li>
+            <li><span class="journey-number">02</span><div><strong data-lang="en">Subtitles in your language</strong><strong data-lang="ko">내 언어로 읽는 자막</strong><p data-lang="en">Speech recognition and translation on-device.</p><p data-lang="ko">기기 안에서 음성을 인식하고 번역합니다.</p></div></li>
+            <li class="journey-next"><span class="journey-number">03</span><div><span class="journey-label" data-lang="en">PLANNED WITH CLAUDE</span><span class="journey-label" data-lang="ko">CLAUDE 기능 계획</span><strong data-lang="en">A note worth returning to</strong><strong data-lang="ko">다시 꺼내 보는 학습 노트</strong><p data-lang="en">Opt-in summaries and vocabulary, linked to the transcript.</p><p data-lang="ko">선택형 요약과 어휘 설명을 원문 자막에 연결합니다.</p></div></li>
+          </ol>
+          <a class="journey-link" href="sublive/#roadmap"><span data-lang="en">Explore our product and roadmap</span><span data-lang="ko">제품과 개발 계획 보기</span> →</a>
         </div>
       </div>
     </section>
@@ -92,6 +110,35 @@
             <h3 data-lang="ko">모든 언어를 위해</h3>
             <p data-lang="en">Built for real multilingual use, from subtitle line breaks in Korean and Japanese to an interface in 21 languages.</p>
             <p data-lang="ko">한국어·일본어 자막 줄바꿈부터 21개 언어 인터페이스까지, 실제 다국어 사용을 기준으로 만듭니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <h2 class="section-title" data-lang="en">About AnyToAny Studio</h2>
+        <h2 class="section-title" data-lang="ko">애니투애니 스튜디오 소개</h2>
+        <p class="section-sub" data-lang="en">An independent software business in South Korea, founded by Jihwan Eom on February 28, 2026.</p>
+        <p class="section-sub" data-lang="ko">엄지환이 2026년 2월 28일 한국에서 시작한 소프트웨어 사업입니다.</p>
+        <div class="grid">
+          <div class="card">
+            <h3 data-lang="en">One founder, one product</h3>
+            <h3 data-lang="ko">1인 창업, 첫 번째 제품</h3>
+            <p data-lang="en">AnyToAny Studio is a bootstrapped sole proprietorship. Our first product, SubLive, is in development and has not yet launched on the App Store.</p>
+            <p data-lang="ko">외부 투자 없이 운영하는 1인 개인사업자입니다. 첫 제품 SubLive를 개발 중이며, 아직 App Store에 출시하지 않았습니다.</p>
+          </div>
+          <div class="card">
+            <h3 data-lang="en">Built with Claude Code</h3>
+            <h3 data-lang="ko">Claude Code로 개발</h3>
+            <p data-lang="en">We use Claude Code during development. SubLive currently uses Apple's on-device speech recognition and translation. It does not yet call the Claude API.</p>
+            <p data-lang="ko">개발 과정에서 Claude Code를 사용합니다. 현재 SubLive는 Apple의 온디바이스 음성 인식과 번역을 사용합니다. Claude API는 아직 연결하지 않았습니다.</p>
+          </div>
+          <div class="card">
+            <h3 data-lang="en">Next: transcript study notes</h3>
+            <h3 data-lang="ko">다음 계획: 자막 학습 노트</h3>
+            <p data-lang="en">We plan to use Claude for optional study notes based on transcript text. This feature is not yet available. <a href="sublive/#roadmap">See the plan</a> or <a href="https://www.linkedin.com/in/jihwan-eom-%E2%80%8D-84b351212/">meet our founder</a>.</p>
+            <p data-lang="ko">사용자가 선택하면 자막 텍스트를 Claude로 처리해 학습 노트를 만드는 기능을 계획하고 있습니다. 아직 제공하는 기능은 아닙니다. <a href="sublive/#roadmap">개발 계획</a>과 <a href="https://www.linkedin.com/in/jihwan-eom-%E2%80%8D-84b351212/">창업자 소개</a>를 확인하세요.</p>
           </div>
         </div>
       </div>
