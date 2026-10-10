@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SubLive Privacy Policy</title>
-  <meta name="description" content="Privacy policy for SubLive by AnyToAny Studio. SubLive processes audio, subtitles, and translations on your device and does not collect personal data.">
+  <meta name="description" content="Privacy policy for SubLive by AnyToAny Studio. SubLive processes audio, subtitles, and translations on your device. The optional Study Notes feature sends subtitle text to Claude only when you ask.">
   <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f0f12" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="../../assets/sublive-icon.svg" type="image/svg+xml">
@@ -28,10 +28,10 @@
     <!-- ===================== English ===================== -->
     <article data-lang="en">
       <h1>SubLive Privacy Policy</h1>
-      <p class="updated">Effective October 7, 2026</p>
+      <p class="updated">Effective October 10, 2026 · Previous version: October 7, 2026</p>
 
       <div class="summary-box">
-        <p><strong>In short:</strong> SubLive does not collect personal data. Speech recognition, translation, and your subtitles stay on your iPhone. We have no accounts, analytics, ads, or tracking. We only receive information if you email us.</p>
+        <p><strong>In short:</strong> SubLive processes speech, translation, and subtitles on your iPhone. If you choose to create a <strong>Study Note</strong>, that video's subtitle text is sent through our server to Anthropic's Claude to write the note. Audio and video are never sent. We have no accounts, analytics, ads, or tracking.</p>
       </div>
 
       <p>This policy explains how AnyToAny Studio (“we”) handles information in the SubLive iOS app (“SubLive”) and on this website.</p>
@@ -40,7 +40,7 @@
       <ul>
         <li><strong>Video and audio.</strong> SubLive reads the audio of videos you choose and converts it to text using Apple's on-device speech recognition. Audio is not sent to us or to any server.</li>
         <li><strong>Subtitles and translations.</strong> Subtitles are translated with Apple's on-device Translation framework. Results are saved on your device so you do not have to process the same video twice.</li>
-        <li><strong>Settings and playback.</strong> Your language choices, subtitle style, and playback positions are saved on your device.</li>
+        <li><strong>Settings and playback.</strong> Your language choices, subtitle style, playback positions, and whether you allowed Study Notes are saved on your device.</li>
       </ul>
       <p>All of this data stays in SubLive's storage on your iPhone. Deleting a video in the app or deleting the app removes it. Depending on your iOS settings, it may be included in your own device backups.</p>
 
@@ -54,14 +54,25 @@
       </div>
       <p>You can change these permissions at any time in the iOS Settings app.</p>
 
-      <h2>3. Network connections</h2>
+      <h2>3. Study Notes (optional, uses Claude)</h2>
+      <p>Study Notes creates a short summary and vocabulary notes from a video's subtitles. It is off by default and runs only when you ask.</p>
+      <ul>
+        <li><strong>When data is sent.</strong> Only after you open Study Notes for a video, review how many subtitle lines and characters will be sent (and the text itself, if you choose), and tap <em>Create Study Note</em>. You can withdraw your consent at any time in Settings → Study Notes (Claude).</li>
+        <li><strong>What is sent.</strong> The subtitle text of that video, as numbered lines, and your note and source language settings. We do not send audio, video, file names, timestamps, or any account or device identifier. Like any internet request, the connection reveals your IP address and basic request information (such as the app version) to our server provider.</li>
+        <li><strong>Who receives it.</strong> Our server, which runs on Cloudflare Workers (Cloudflare, Inc., USA), forwards the text to the Claude API of Anthropic, PBC (USA), which writes the note. The connection is encrypted (HTTPS).</li>
+        <li><strong>Retention.</strong> Our server does not store or log the subtitle text or the notes. Under Anthropic's policy for API customers, Anthropic deletes API inputs and outputs within 30 days, except when longer retention is needed to enforce its Usage Policy (content flagged by its safety systems may be kept for up to 2 years) or required by law, and it does not use API data to train its models by default. See the <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data">Anthropic Privacy Center</a>.</li>
+        <li><strong>On your device.</strong> The note is returned to SubLive and kept only while the app is open. It is not saved to your device.</li>
+        <li><strong>Your choice.</strong> Subtitles can contain personal information spoken in a video. Do not create Study Notes for videos whose speech you do not want to send. Every other SubLive feature works without Study Notes.</li>
+      </ul>
+
+      <h2>4. Other network connections</h2>
       <ul>
         <li><strong>Video links.</strong> If you paste or share a video link (for example, a Google Drive link), SubLive downloads the video directly from that server to your device. That server receives standard request information, such as your IP address, under its own privacy policy. We do not receive it.</li>
         <li><strong>Language models.</strong> When you enable a new recognition or translation language, iOS downloads the model from Apple. Apple's privacy policy applies to that download.</li>
       </ul>
-      <p>SubLive does not otherwise connect to the internet. It contains no third-party analytics, advertising, or tracking SDKs.</p>
+      <p>Apart from these and Study Notes, SubLive does not connect to the internet. It contains no third-party analytics, advertising, or tracking SDKs.</p>
 
-      <h2>4. Information you send us</h2>
+      <h2>5. Information you send us</h2>
       <p>If you email us, we receive your email address and the content of your message. We use it only to reply to you.</p>
       <ul>
         <li><strong>Retention:</strong> We delete support emails within one year after your inquiry is resolved, unless a law requires us to keep them longer.</li>
@@ -69,20 +80,17 @@
         <li><strong>Sharing:</strong> We do not sell or share your information with third parties.</li>
       </ul>
 
-      <h2>5. This website</h2>
-      <p>This website does not use cookies or analytics. It remembers your language choice in your browser's local storage. The site is hosted on GitHub Pages, which may log visitor IP addresses for security purposes, and loads fonts from the jsDelivr CDN.</p>
+      <h2>6. This website</h2>
+      <p>This website does not use cookies or analytics. It remembers your language choice in your browser's local storage. The site is hosted on GitHub Pages, which may log visitor IP addresses for security purposes, and loads fonts from Google Fonts and the jsDelivr CDN.</p>
 
-      <h2>6. Children</h2>
-      <p>SubLive does not knowingly collect personal information from anyone, including children under 14.</p>
+      <h2>7. Children</h2>
+      <p>We do not knowingly collect personal information from children under 14.</p>
 
-      <h2>7. Your rights</h2>
-      <p>You can ask us to access, correct, delete, or stop processing any information we hold about you by emailing <a href="mailto:hello@anytoanystudio.com">hello@anytoanystudio.com</a>. We will respond without undue delay.</p>
-
-      <h2>8. Future features</h2>
-      <p>If we add features that send data to a cloud service, they will be optional, clearly labeled, and off by default. We will update this policy before such features are released.</p>
+      <h2>8. Your rights</h2>
+      <p>You can ask us to access, correct, delete, or stop processing any information we hold about you by emailing <a href="mailto:hello@anytoanystudio.com">hello@anytoanystudio.com</a>. We will respond without undue delay. Because our server does not keep Study Notes data, we hold no copies of your subtitles or notes.</p>
 
       <h2>9. Changes</h2>
-      <p>We will post any changes on this page and update the effective date above.</p>
+      <p>We post any changes on this page and update the effective date above. October 10, 2026: added Study Notes (section 3) and Google Fonts (section 6).</p>
 
       <h2>10. Contact</h2>
       <p>AnyToAny Studio (애니투애니 스튜디오) · Representative and privacy officer: Jihwan Eom · <a href="mailto:hello@anytoanystudio.com">hello@anytoanystudio.com</a></p>
@@ -91,10 +99,10 @@
     <!-- ===================== 한국어 ===================== -->
     <article data-lang="ko">
       <h1>SubLive 개인정보처리방침</h1>
-      <p class="updated">시행일: 2026년 10월 7일</p>
+      <p class="updated">시행일: 2026년 10월 10일 · 이전 시행일: 2026년 10월 7일</p>
 
       <div class="summary-box">
-        <p><strong>요약:</strong> SubLive는 개인정보를 수집하지 않습니다. 음성 인식, 번역, 자막은 모두 iPhone 안에서 처리하고 iPhone에만 저장합니다. 계정, 분석 도구, 광고, 추적 기능이 없습니다. 이메일로 문의하실 때만 정보를 받습니다.</p>
+        <p><strong>요약:</strong> SubLive는 음성 인식, 번역, 자막을 iPhone 안에서 처리합니다. 사용자가 <strong>학습 노트</strong>를 만들기로 선택한 경우에만, 노트를 만들기 위해 해당 영상의 자막 텍스트를 회사 서버를 거쳐 Anthropic의 Claude로 보냅니다. 음성과 영상은 보내지 않습니다. 계정, 분석 도구, 광고, 추적 기능이 없습니다.</p>
       </div>
 
       <p>애니투애니 스튜디오(이하 “회사”)는 「개인정보 보호법」에 따라 SubLive iOS 앱(이하 “SubLive”)과 이 웹사이트에서 정보를 어떻게 처리하는지 다음과 같이 알려 드립니다.</p>
@@ -103,7 +111,7 @@
       <ul>
         <li><strong>영상과 음성:</strong> SubLive는 사용자가 고른 영상의 음성을 Apple 온디바이스 음성 인식으로 텍스트로 바꿉니다. 음성은 회사나 다른 서버로 전송하지 않습니다.</li>
         <li><strong>자막과 번역:</strong> 자막은 Apple 온디바이스 번역(Translation 프레임워크)으로 번역합니다. 같은 영상을 다시 처리하지 않도록 결과를 기기에 저장합니다.</li>
-        <li><strong>설정과 재생 위치:</strong> 언어 선택, 자막 스타일, 재생 위치를 기기에 저장합니다.</li>
+        <li><strong>설정과 재생 위치:</strong> 언어 선택, 자막 스타일, 재생 위치, 학습 노트 허용 여부를 기기에 저장합니다.</li>
       </ul>
       <p>이 정보는 모두 iPhone의 SubLive 저장 공간에만 있습니다. 앱에서 영상을 지우거나 앱을 삭제하면 함께 삭제됩니다. iOS 설정에 따라 사용자 본인의 기기 백업에 포함될 수 있습니다.</p>
 
@@ -117,14 +125,25 @@
       </div>
       <p>두 권한 모두 선택 사항입니다. iOS 설정 앱에서 언제든 바꿀 수 있습니다. 권한을 허용하지 않으면 해당 기능만 쓸 수 없습니다.</p>
 
-      <h2>3. 네트워크 연결</h2>
+      <h2>3. 학습 노트 (선택 기능, Claude 사용)</h2>
+      <p>학습 노트는 영상의 자막으로 짧은 요약과 어휘 설명을 만드는 기능입니다. 기본값은 꺼짐이며 사용자가 요청할 때만 동작합니다.</p>
+      <ul>
+        <li><strong>전송 시점:</strong> 영상에서 학습 노트를 열고, 보낼 자막 줄 수와 글자 수(원하면 실제 텍스트)를 확인한 뒤 <em>학습 노트 만들기</em>를 누를 때만 보냅니다. 설정 → 학습 노트(Claude)에서 언제든 동의를 철회할 수 있습니다.</li>
+        <li><strong>전송 항목:</strong> 해당 영상의 자막 텍스트(번호가 붙은 줄), 노트 언어와 원본 언어 설정. 음성, 영상, 파일 이름, 타임스탬프, 계정·기기 식별자는 보내지 않습니다. 모든 인터넷 요청과 마찬가지로, 연결 과정에서 IP 주소와 앱 버전 같은 기본 요청 정보가 서버 제공업체에 전달됩니다.</li>
+        <li><strong>받는 곳:</strong> Cloudflare Workers(Cloudflare, Inc., 미국)에서 실행되는 회사 서버가 텍스트를 Anthropic, PBC(미국)의 Claude API로 전달하고, Claude가 노트를 작성합니다. 연결은 암호화(HTTPS)됩니다.</li>
+        <li><strong>보관:</strong> 회사 서버는 자막 텍스트와 노트를 저장하거나 로그로 남기지 않습니다. Anthropic은 API 고객 데이터 방침에 따라 API 입력과 출력을 30일 이내에 삭제합니다. 다만 이용정책 집행에 필요한 경우(안전 시스템이 표시한 내용은 최대 2년)나 법령상 필요한 경우 더 오래 보관할 수 있으며, 기본적으로 API 데이터를 모델 학습에 쓰지 않습니다. <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data">Anthropic Privacy Center</a>를 참고하세요.</li>
+        <li><strong>기기에서:</strong> 노트는 SubLive로 돌아와 앱이 열려 있는 동안만 유지되며, 기기에 저장하지 않습니다.</li>
+        <li><strong>선택:</strong> 자막에는 영상 속에서 말한 개인정보가 들어 있을 수 있습니다. 보내고 싶지 않은 내용이 담긴 영상에는 학습 노트를 쓰지 마세요. 학습 노트를 쓰지 않아도 SubLive의 다른 기능은 모두 쓸 수 있습니다.</li>
+      </ul>
+
+      <h2>4. 그 밖의 네트워크 연결</h2>
       <ul>
         <li><strong>영상 링크:</strong> 영상 링크(예: Google Drive 링크)를 붙여 넣거나 공유하면, SubLive는 그 서버에서 기기로 영상을 직접 내려받습니다. 이때 해당 서버는 IP 주소 같은 일반적인 요청 정보를 자체 방침에 따라 받습니다. 회사는 이 정보를 받지 않습니다.</li>
         <li><strong>언어 모델:</strong> 새 인식·번역 언어를 켜면 iOS가 Apple 서버에서 모델을 내려받습니다. 이 다운로드에는 Apple의 개인정보처리방침이 적용됩니다.</li>
       </ul>
-      <p>이 외에는 인터넷에 연결하지 않습니다. 제3자 분석, 광고, 추적 SDK를 쓰지 않습니다.</p>
+      <p>이것과 학습 노트 외에는 인터넷에 연결하지 않습니다. 제3자 분석, 광고, 추적 SDK를 쓰지 않습니다.</p>
 
-      <h2>4. 문의 시 처리하는 개인정보</h2>
+      <h2>5. 문의 시 처리하는 개인정보</h2>
       <div class="table-scroll">
         <table>
           <tr><th>항목</th><th>목적</th><th>보유 기간</th></tr>
@@ -133,35 +152,37 @@
       </div>
       <p>회사는 개인정보를 제3자에게 판매하거나 제공하지 않습니다.</p>
 
-      <h2>5. 처리 위탁 및 국외 이전</h2>
-      <p>문의 메일을 받기 위해 다음 업체의 서비스를 이용합니다. 정보는 메일을 보내는 시점에 네트워크로 전송됩니다. 국외 이전을 원하지 않으면 이메일로 문의하지 않으시면 됩니다. 이 경우 문의에 답변을 드릴 수 없습니다.</p>
+      <h2>6. 처리 위탁 및 국외 이전</h2>
+      <p>회사는 아래 업체에 처리를 위탁하며, 정보는 미국으로 이전됩니다. 정보는 학습 노트 만들기를 누르거나 메일을 보내는 시점에 암호화된 네트워크로 전송됩니다. 국외 이전을 원하지 않으면 학습 노트를 쓰지 않거나(설정에서 끌 수 있음) 이메일로 문의하지 않으시면 됩니다. 이 경우 해당 기능이나 문의 답변만 이용할 수 없습니다.</p>
       <div class="table-scroll">
         <table>
           <tr><th>이전받는 자</th><th>국가</th><th>이전 항목</th><th>목적</th><th>보유 기간</th></tr>
-          <tr><td>Cloudflare, Inc.</td><td>미국</td><td>이메일 주소, 문의 내용</td><td>메일 전달</td><td>전달 즉시 처리 완료</td></tr>
-          <tr><td>Google LLC (Gmail)</td><td>미국</td><td>이메일 주소, 문의 내용</td><td>메일 수신·보관</td><td>4번의 보유 기간과 같음</td></tr>
+          <tr><td>Cloudflare, Inc. (Workers)</td><td>미국</td><td>영상 자막 텍스트, 언어 설정, IP 주소 등 통신 정보</td><td>학습 노트 요청을 Claude API로 전달</td><td>저장하지 않음(전달 즉시 처리 완료)</td></tr>
+          <tr><td>Anthropic, PBC (Claude API)</td><td>미국</td><td>영상 자막 텍스트, 언어 설정</td><td>학습 노트 작성</td><td>30일 이내 삭제(이용정책 위반 의심 시 최대 2년, 법령상 필요 시 그 기간)</td></tr>
+          <tr><td>Cloudflare, Inc. (이메일 라우팅)</td><td>미국</td><td>이메일 주소, 문의 내용</td><td>메일 전달</td><td>전달 즉시 처리 완료</td></tr>
+          <tr><td>Google LLC (Gmail)</td><td>미국</td><td>이메일 주소, 문의 내용</td><td>메일 수신·보관</td><td>5번의 보유 기간과 같음</td></tr>
         </table>
       </div>
 
-      <h2>6. 개인정보의 파기</h2>
+      <h2>7. 개인정보의 파기</h2>
       <p>보유 기간이 끝나거나 처리 목적을 달성하면 지체 없이 파기합니다. 전자 파일은 복구할 수 없는 방법으로 삭제합니다.</p>
 
-      <h2>7. 안전성 확보 조치</h2>
-      <p>문의 메일 계정에 대한 접근을 대표자 1인으로 제한하고, 2단계 인증을 사용합니다.</p>
+      <h2>8. 안전성 확보 조치</h2>
+      <p>문의 메일 계정에 대한 접근을 대표자 1인으로 제한하고, 2단계 인증을 사용합니다. 학습 노트 서버는 암호화된 연결(HTTPS)만 받고, 앱 인증 토큰이 없는 요청을 거부하며, Claude API 키는 앱이 아닌 서버의 비밀값으로만 보관합니다.</p>
 
-      <h2>8. 이 웹사이트</h2>
-      <p>이 웹사이트는 쿠키와 분석 도구를 쓰지 않습니다. 언어 선택만 브라우저의 로컬 저장소에 기억합니다. 웹사이트는 GitHub Pages에서 호스팅하며, GitHub는 보안을 위해 방문자 IP 주소를 기록할 수 있습니다. 글꼴은 jsDelivr CDN에서 불러옵니다.</p>
+      <h2>9. 이 웹사이트</h2>
+      <p>이 웹사이트는 쿠키와 분석 도구를 쓰지 않습니다. 언어 선택만 브라우저의 로컬 저장소에 기억합니다. 웹사이트는 GitHub Pages에서 호스팅하며, GitHub는 보안을 위해 방문자 IP 주소를 기록할 수 있습니다. 글꼴은 Google Fonts와 jsDelivr CDN에서 불러옵니다.</p>
 
-      <h2>9. 아동의 개인정보</h2>
-      <p>회사는 만 14세 미만 아동을 포함해 누구의 개인정보도 수집하지 않습니다.</p>
+      <h2>10. 아동의 개인정보</h2>
+      <p>회사는 만 14세 미만 아동의 개인정보를 알면서 수집하지 않습니다.</p>
 
-      <h2>10. 정보주체의 권리</h2>
-      <p>회사가 보유한 본인의 개인정보에 대해 열람, 정정, 삭제, 처리정지를 요구할 수 있습니다. <a href="mailto:hello@anytoanystudio.com">hello@anytoanystudio.com</a>으로 요청하시면 지체 없이 조치합니다.</p>
+      <h2>11. 정보주체의 권리</h2>
+      <p>회사가 보유한 본인의 개인정보에 대해 열람, 정정, 삭제, 처리정지를 요구할 수 있습니다. <a href="mailto:hello@anytoanystudio.com">hello@anytoanystudio.com</a>으로 요청하시면 지체 없이 조치합니다. 회사 서버는 학습 노트 데이터를 보관하지 않으므로, 회사에는 사용자의 자막이나 노트 사본이 없습니다.</p>
 
-      <h2>11. 개인정보 보호책임자</h2>
+      <h2>12. 개인정보 보호책임자</h2>
       <p>성명: 엄지환 (대표) · 이메일: <a href="mailto:hello@anytoanystudio.com">hello@anytoanystudio.com</a></p>
 
-      <h2>12. 권익침해 구제 방법</h2>
+      <h2>13. 권익침해 구제 방법</h2>
       <p>개인정보 침해에 대한 신고나 상담은 아래 기관에 문의할 수 있습니다.</p>
       <ul>
         <li>개인정보침해신고센터: privacy.kisa.or.kr / 국번 없이 118</li>
@@ -170,11 +191,8 @@
         <li>경찰청: ecrm.police.go.kr / 국번 없이 182</li>
       </ul>
 
-      <h2>13. 향후 기능</h2>
-      <p>클라우드로 데이터를 보내는 기능을 추가하면, 그 기능은 선택 사항이며 기본값은 꺼짐입니다. 기능을 출시하기 전에 이 방침을 먼저 고칩니다.</p>
-
       <h2>14. 방침의 변경</h2>
-      <p>이 방침을 바꾸면 이 페이지에 게시하고 위의 시행일을 고칩니다.</p>
+      <p>이 방침을 바꾸면 이 페이지에 게시하고 위의 시행일을 고칩니다. 2026년 10월 10일: 학습 노트(3번)와 처리 위탁·국외 이전 항목(6번), Google Fonts(9번)를 추가했습니다.</p>
     </article>
   </main>
 
