@@ -4,15 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SubLive — On-device AI subtitles for iPhone</title>
-  <meta name="description" content="SubLive generates and translates subtitles for any video, entirely on your iPhone. 40 speech-recognition language variants, live translation, dual subtitles, SRT export.">
+  <meta name="description" content="SubLive generates and translates subtitles for any video, entirely on your iPhone. 40 speech-recognition language variants, live translation, dual subtitles, SRT export. In development by AnyToAny Studio.">
   <meta property="og:title" content="SubLive — On-device AI subtitles for iPhone">
   <meta property="og:description" content="Subtitles and translation for any video, generated on your iPhone. Nothing is uploaded.">
   <meta property="og:url" content="https://anytoanystudio.com/sublive/">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://anytoanystudio.com/assets/screen-welcome.webp">
   <link rel="canonical" href="https://anytoanystudio.com/sublive/">
-  <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0f0f12" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0b0d" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="../assets/sublive-icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="../assets/style.css">
   <script src="../assets/site.js" defer></script>
@@ -20,9 +24,10 @@
 <body>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="../"><img src="../assets/favicon.svg" alt="" width="30" height="30"><span>AnyToAny Studio</span></a>
+      <a class="brand" href="../"><img src="../assets/favicon.svg" alt="" width="28" height="28"><span>AnyToAny Studio</span></a>
       <nav class="nav">
         <a class="hide-sm" href="#features"><span data-lang="en">Features</span><span data-lang="ko">기능</span></a>
+        <a class="hide-sm" href="#roadmap"><span data-lang="en">Roadmap</span><span data-lang="ko">개발 계획</span></a>
         <a href="support/"><span data-lang="en">Support</span><span data-lang="ko">지원</span></a>
         <button class="lang-toggle" type="button">한국어</button>
       </nav>
@@ -30,20 +35,21 @@
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero">
-      <div class="wrap app-hero">
+      <div class="wrap hero-grid">
         <div>
           <div class="app-title">
-            <img class="app-icon" src="../assets/sublive-icon.svg" alt="SubLive app icon" width="72" height="72">
+            <img class="app-icon" src="../assets/sublive-icon.svg" alt="SubLive app icon" width="64" height="64">
             <div>
               <strong>SubLive</strong>
               <span data-lang="en">by AnyToAny Studio</span><span data-lang="ko">애니투애니 스튜디오</span>
             </div>
           </div>
-          <h1 data-lang="en">Subtitles for any video. <span class="grad">Made on your iPhone.</span></h1>
-          <h1 data-lang="ko">어떤 영상이든 자막을. <span class="grad">iPhone 안에서.</span></h1>
-          <p class="lede" data-lang="en">SubLive listens to the video you are watching, writes subtitles as it plays, and translates them into your language. The current build processes speech and translation on your device. Your videos are never uploaded.</p>
-          <p class="lede" data-lang="ko">SubLive는 재생 중인 영상의 음성을 듣고 자막을 만든 뒤, 원하는 언어로 번역합니다. 현재 빌드는 음성 인식과 번역을 기기 안에서 처리합니다. 영상을 업로드하지 않습니다.</p>
+          <h1 data-lang="en">Subtitles for any video.<br><em>Made on your iPhone.</em></h1>
+          <h1 data-lang="ko">어떤 영상이든 자막을.<br><span class="ink-grad">iPhone 안에서.</span></h1>
+          <p class="lede" data-lang="en">SubLive listens to the video you are watching, writes subtitles as it plays, and translates them into your language. Speech recognition and translation run on your device, and your videos are never uploaded.</p>
+          <p class="lede" data-lang="ko">SubLive는 재생 중인 영상의 음성을 듣고 자막을 만든 뒤, 원하는 언어로 번역합니다. 음성 인식과 번역은 기기 안에서 처리하며 영상을 업로드하지 않습니다.</p>
           <div class="hero-actions">
             <span class="btn btn-primary" aria-disabled="true"><span data-lang="en">Coming soon to the App Store</span><span data-lang="ko">App Store 출시 예정</span></span>
             <a class="btn btn-ghost" href="mailto:support@anytoanystudio.com?subject=SubLive%20launch"><span data-lang="en">Get notified</span><span data-lang="ko">출시 알림 받기</span></a>
@@ -52,53 +58,77 @@
           <p class="meta" data-lang="ko">iOS 26 이상 · iPhone 15 Pro, 15 Pro Max, 모든 iPhone 16·17 모델</p>
         </div>
 
-        <figure class="phone-figure">
-        <div class="phone" aria-hidden="true">
-          <div class="screen">
-            <div class="notch"></div>
-            <div class="video">
-              <div class="subs">
-                <div>We started the project with one simple question.</div><br>
-                <div class="tr">우리는 단순한 질문 하나로 프로젝트를 시작했습니다.</div>
-              </div>
-            </div>
-            <div class="ui">
-              <div class="bar"></div>
-              <div class="row"><span>12:48</span><span>−20:31</span></div>
-              <div class="langs"><span>English</span><span>→</span><span>한국어</span><span>1.0×</span></div>
-            </div>
-          </div>
-        </div>
-        <figcaption data-lang="en">Interface illustration · App in development</figcaption>
-        <figcaption data-lang="ko">화면 일러스트 · 앱 개발 중</figcaption>
+        <figure class="fan" aria-label="SubLive screenshots">
+          <div class="device d-left"><img src="../assets/screen-language.webp" width="600" height="1301" alt="Language selection screen" loading="eager"></div>
+          <div class="device d-right"><img src="../assets/screen-translation.webp" width="600" height="1301" alt="Translation setup screen" loading="eager"></div>
+          <div class="device d-center"><img src="../assets/screen-welcome.webp" width="600" height="1301" alt="SubLive welcome screen" loading="eager"></div>
+          <figcaption data-lang="en">Actual screens from the development build (Korean UI), October 2026</figcaption>
+          <figcaption data-lang="ko">개발 빌드의 실제 화면(한국어 UI), 2026년 10월</figcaption>
         </figure>
       </div>
     </section>
 
-    <hr class="divider">
+    <!-- Gallery -->
+    <section style="padding-top:8px">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker" data-lang="en">A look inside</span>
+          <span class="kicker" data-lang="ko">앱 둘러보기</span>
+          <h2 class="section-title" data-lang="en">Set up in <em>five screens.</em></h2>
+          <h2 class="section-title" data-lang="ko">다섯 화면이면 <span class="ink-grad">준비 끝.</span></h2>
+        </div>
+        <div class="rail full reveal" tabindex="0" aria-label="SubLive onboarding screens">
+          <figure class="shot">
+            <div class="device"><img src="../assets/screen-language.webp" width="600" height="1301" alt="Language selection screen" loading="lazy"></div>
+            <figcaption><b><span class="n">1</span><span data-lang="en">Choose your language</span><span data-lang="ko">언어 선택</span></b><span data-lang="en">21 interface languages</span><span data-lang="ko">21개 인터페이스 언어</span></figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="device"><img src="../assets/screen-welcome.webp" width="600" height="1301" alt="Welcome screen" loading="lazy"></div>
+            <figcaption><b><span class="n">2</span><span data-lang="en">On-device by design</span><span data-lang="ko">온디바이스 설계</span></b><span data-lang="en">Processing stays on the iPhone</span><span data-lang="ko">처리는 iPhone 안에서</span></figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="device"><img src="../assets/screen-translation.webp" width="600" height="1301" alt="Translation language pair screen" loading="lazy"></div>
+            <figcaption><b><span class="n">3</span><span data-lang="en">Pick a language pair</span><span data-lang="ko">언어 쌍 선택</span></b><span data-lang="en">For example, Japanese → Korean</span><span data-lang="ko">예: 일본어 → 한국어</span></figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="device"><img src="../assets/screen-howto.webp" width="600" height="1301" alt="How to use screen" loading="lazy"></div>
+            <figcaption><b><span class="n">4</span><span data-lang="en">Just add a video</span><span data-lang="ko">영상만 추가</span></b><span data-lang="en">From Photos or a link</span><span data-lang="ko">사진 보관함 또는 링크</span></figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="device"><img src="../assets/screen-appearance.webp" width="600" height="1301" alt="Appearance screen" loading="lazy"></div>
+            <figcaption><b><span class="n">5</span><span data-lang="en">Light or dark</span><span data-lang="ko">라이트·다크</span></b><span data-lang="en">Choose your theme</span><span data-lang="ko">화면 모드 선택</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
+    <!-- How it works -->
     <section>
       <div class="wrap">
-        <h2 class="section-title" data-lang="en">How it works</h2>
-        <h2 class="section-title" data-lang="ko">사용 방법</h2>
-        <p class="section-sub" data-lang="en">The first subtitles appear within seconds, and the rest keep coming while you watch.</p>
-        <p class="section-sub" data-lang="ko">첫 자막은 몇 초 안에 나타나고, 나머지는 보는 동안 계속 만들어집니다.</p>
-        <div class="grid steps">
-          <div class="card">
-            <h3 data-lang="en">Open a video</h3>
-            <h3 data-lang="ko">영상 열기</h3>
+        <div class="section-head reveal">
+          <span class="kicker" data-lang="en">How it works</span>
+          <span class="kicker" data-lang="ko">사용 방법</span>
+          <h2 class="section-title" data-lang="en">Subtitles in <em>seconds.</em></h2>
+          <h2 class="section-title" data-lang="ko">몇 초 만에 <span class="ink-grad">첫 자막.</span></h2>
+          <p class="section-sub" data-lang="en">The first subtitles appear within seconds, and the rest keep coming while you watch.</p>
+          <p class="section-sub" data-lang="ko">첫 자막은 몇 초 안에 나타나고, 나머지는 보는 동안 계속 만들어집니다.</p>
+        </div>
+        <div class="flow reveal">
+          <div class="flow-step">
+            <div class="top"><span class="num">01</span></div>
+            <h3 data-lang="en">Open a video</h3><h3 data-lang="ko">영상 열기</h3>
             <p data-lang="en">Pick one from your photo library, paste a video link, or share a link to SubLive from another app.</p>
             <p data-lang="ko">사진 보관함에서 고르거나, 영상 링크를 붙여 넣거나, 다른 앱에서 SubLive로 링크를 공유합니다.</p>
           </div>
-          <div class="card">
-            <h3 data-lang="en">Recognize speech on-device</h3>
-            <h3 data-lang="ko">기기에서 음성 인식</h3>
+          <div class="flow-step">
+            <div class="top"><span class="num">02</span></div>
+            <h3 data-lang="en">Recognize speech on-device</h3><h3 data-lang="ko">기기에서 음성 인식</h3>
             <p data-lang="en">Apple's on-device speech engine transcribes the audio in 40 language variants, with word-level timing.</p>
             <p data-lang="ko">Apple 온디바이스 음성 엔진이 40개 언어·지역의 음성을 단어 단위 타이밍과 함께 받아 적습니다.</p>
           </div>
-          <div class="card">
-            <h3 data-lang="en">Read in your language</h3>
-            <h3 data-lang="ko">내 언어로 읽기</h3>
+          <div class="flow-step">
+            <div class="top"><span class="num">03</span></div>
+            <h3 data-lang="en">Read in your language</h3><h3 data-lang="ko">내 언어로 읽기</h3>
             <p data-lang="en">Subtitles are split into readable lines and translated on-device, shown alone or alongside the original.</p>
             <p data-lang="ko">자막을 읽기 좋은 줄로 나누고 기기 안에서 번역합니다. 번역만 보거나 원문과 함께 볼 수 있습니다.</p>
           </div>
@@ -106,52 +136,51 @@
       </div>
     </section>
 
+    <!-- Features -->
     <section id="features">
       <div class="wrap">
-        <h2 class="section-title" data-lang="en">Features</h2>
-        <h2 class="section-title" data-lang="ko">주요 기능</h2>
-        <p class="section-sub" data-lang="en">Built for watching lectures, interviews, and shows in another language — and for learning one.</p>
-        <p class="section-sub" data-lang="ko">다른 언어로 된 강의, 인터뷰, 영상을 보고, 그 언어를 배우는 데 맞춰 만들었습니다.</p>
-        <div class="grid">
+        <div class="section-head reveal">
+          <span class="kicker" data-lang="en">Features</span>
+          <span class="kicker" data-lang="ko">주요 기능</span>
+          <h2 class="section-title" data-lang="en">Made for watching <em>and learning.</em></h2>
+          <h2 class="section-title" data-lang="ko">보고, <span class="ink-grad">배우기 위해.</span></h2>
+          <p class="section-sub" data-lang="en">Built for lectures, interviews, and shows in another language, and for learning that language.</p>
+          <p class="section-sub" data-lang="ko">다른 언어로 된 강의, 인터뷰, 영상을 보고, 그 언어를 배우는 데 맞춰 만들었습니다.</p>
+        </div>
+        <div class="grid reveal">
           <div class="card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></svg></div>
-            <h3 data-lang="en">On-device recognition</h3>
-            <h3 data-lang="ko">온디바이스 음성 인식</h3>
-            <p data-lang="en">40 language variants, five sensitivity levels, and no internet connection required.</p>
+            <h3 data-lang="en">On-device recognition</h3><h3 data-lang="ko">온디바이스 음성 인식</h3>
+            <p data-lang="en">40 language variants and five sensitivity levels, with no internet connection required.</p>
             <p data-lang="ko">40개 언어·지역, 5단계 인식 민감도를 지원하며 인터넷 연결이 필요 없습니다.</p>
           </div>
           <div class="card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg></div>
-            <h3 data-lang="en">Live translation</h3>
-            <h3 data-lang="ko">실시간 번역</h3>
+            <h3 data-lang="en">Live translation</h3><h3 data-lang="ko">실시간 번역</h3>
             <p data-lang="en">Each new subtitle is translated as soon as it appears, using Apple's on-device translation.</p>
             <p data-lang="ko">자막이 생길 때마다 Apple 온디바이스 번역으로 바로 번역합니다.</p>
           </div>
           <div class="card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 12h4M14 12h4M6 16h12"/></svg></div>
-            <h3 data-lang="en">Dual subtitles</h3>
-            <h3 data-lang="ko">이중 자막</h3>
+            <h3 data-lang="en">Dual subtitles</h3><h3 data-lang="ko">이중 자막</h3>
             <p data-lang="en">Show the original and the translation together, with adjustable style and position.</p>
             <p data-lang="ko">원문과 번역을 함께 보여 줍니다. 스타일과 위치를 조절할 수 있습니다.</p>
           </div>
           <div class="card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14M7 22l-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg></div>
-            <h3 data-lang="en">A-B repeat &amp; speed</h3>
-            <h3 data-lang="ko">구간 반복과 속도 조절</h3>
-            <p data-lang="en">Loop a sentence, slow it down, and double-tap to skip — made for language learners.</p>
+            <h3 data-lang="en">A-B repeat &amp; speed</h3><h3 data-lang="ko">구간 반복과 속도 조절</h3>
+            <p data-lang="en">Loop a sentence, slow it down, and double-tap to skip. Made for language learners.</p>
             <p data-lang="ko">문장을 반복하고, 속도를 늦추고, 두 번 탭해 건너뜁니다. 언어 학습자를 위한 기능입니다.</p>
           </div>
           <div class="card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
-            <h3 data-lang="en">Search &amp; edit</h3>
-            <h3 data-lang="ko">검색과 편집</h3>
+            <h3 data-lang="en">Search &amp; edit</h3><h3 data-lang="ko">검색과 편집</h3>
             <p data-lang="en">Search the transcript, jump to any line, and fix words the recognizer got wrong.</p>
             <p data-lang="ko">자막을 검색해 원하는 줄로 이동하고, 잘못 인식한 단어를 고칠 수 있습니다.</p>
           </div>
           <div class="card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3"/></svg></div>
-            <h3 data-lang="en">SRT import &amp; export</h3>
-            <h3 data-lang="ko">SRT 가져오기·내보내기</h3>
+            <h3 data-lang="en">SRT import &amp; export</h3><h3 data-lang="ko">SRT 가져오기·내보내기</h3>
             <p data-lang="en">Save original or dual-language SRT files, or bring in SRT and VTT subtitles you already have.</p>
             <p data-lang="ko">원문 또는 이중 언어 SRT 파일로 저장하고, 갖고 있는 SRT·VTT 자막을 불러올 수 있습니다.</p>
           </div>
@@ -159,9 +188,10 @@
       </div>
     </section>
 
-    <section>
+    <!-- Privacy -->
+    <section style="padding-top:8px">
       <div class="wrap">
-        <div class="callout">
+        <div class="callout reveal">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
           <div>
             <h3 data-lang="en">Your videos never leave your iPhone</h3>
@@ -172,34 +202,39 @@
         </div>
       </div>
     </section>
+
+    <!-- Roadmap -->
     <section id="roadmap" class="roadmap">
       <div class="wrap">
-        <span class="chip" data-lang="en">Planned · Not yet available</span>
-        <span class="chip" data-lang="ko">개발 계획 · 아직 제공하지 않음</span>
-        <h2 class="section-title" data-lang="en">Learn from a video with Claude</h2>
-        <h2 class="section-title" data-lang="ko">Claude로 영상에서 배우기</h2>
-        <p class="section-sub" data-lang="en">We are planning optional study notes for language learners. Claude will use transcript text to explain the content, with links back to the relevant subtitles.</p>
-        <p class="section-sub" data-lang="ko">언어 학습자를 위한 선택형 학습 노트를 계획하고 있습니다. Claude가 자막 텍스트를 바탕으로 내용을 설명하고, 관련 자막으로 연결합니다.</p>
-        <div class="grid steps">
-          <div class="card">
-            <h3 data-lang="en">Choose the transcript</h3>
-            <h3 data-lang="ko">처리할 자막 선택</h3>
-            <p data-lang="en">Review the transcript and choose what to send. The feature will stay off until you choose to use it.</p>
-            <p data-lang="ko">자막을 확인하고 보낼 내용을 선택합니다. 이 기능은 사용자가 직접 켜기 전까지 동작하지 않도록 만들 계획입니다.</p>
+        <div class="section-head reveal">
+          <span><span class="chip" data-lang="en">Prototype · Not yet in the app</span><span class="chip" data-lang="ko">시제품 · 아직 앱에 없음</span></span>
+          <h2 class="section-title" data-lang="en">Learn from a video <em>with Claude.</em></h2>
+          <h2 class="section-title" data-lang="ko">Claude로 <span class="ink-grad">영상에서 배우기.</span></h2>
+          <p class="section-sub" data-lang="en">We are building optional study notes for language learners. Claude uses transcript text to summarize the content and explain useful vocabulary, with every note linked back to the subtitle it came from.</p>
+          <p class="section-sub" data-lang="ko">언어 학습자를 위한 선택형 학습 노트를 만들고 있습니다. Claude가 자막 텍스트로 내용을 요약하고 유용한 어휘를 설명하며, 모든 노트를 원래 자막에 연결합니다.</p>
+        </div>
+        <div class="flow reveal">
+          <div class="flow-step">
+            <div class="top"><span class="num">01</span></div>
+            <h3 data-lang="en">Choose the transcript</h3><h3 data-lang="ko">처리할 자막 선택</h3>
+            <p data-lang="en">Review the transcript and choose what to send. The feature stays off until you turn it on.</p>
+            <p data-lang="ko">자막을 확인하고 보낼 내용을 선택합니다. 사용자가 직접 켜기 전까지 이 기능은 동작하지 않습니다.</p>
           </div>
-          <div class="card">
-            <h3 data-lang="en">Get a study note</h3>
-            <h3 data-lang="ko">학습 노트 만들기</h3>
-            <p data-lang="en">Claude will generate a brief summary and explain useful vocabulary in context. Only selected transcript text will be sent, never audio or video.</p>
-            <p data-lang="ko">Claude가 짧은 요약과 문맥에 맞는 어휘 설명을 만듭니다. 선택한 자막 텍스트만 전송하며, 음성과 영상은 보내지 않을 계획입니다.</p>
+          <div class="flow-step next">
+            <div class="top"><span class="num">02</span><span class="chip chip-soft">Claude</span></div>
+            <h3 data-lang="en">Get a study note</h3><h3 data-lang="ko">학습 노트 만들기</h3>
+            <p data-lang="en">Claude writes a short summary and explains vocabulary in context. Only the selected transcript text is sent, never audio or video.</p>
+            <p data-lang="ko">Claude가 짧은 요약과 문맥에 맞는 어휘 설명을 만듭니다. 선택한 자막 텍스트만 보내며, 음성과 영상은 보내지 않습니다.</p>
           </div>
-          <div class="card">
-            <h3 data-lang="en">Return to the source</h3>
-            <h3 data-lang="ko">원문으로 돌아가기</h3>
-            <p data-lang="en">Each note will reference subtitle timestamps so you can replay the passage. We will check output quality and update our privacy policy before release.</p>
-            <p data-lang="ko">노트에서 자막 시점을 확인하고 해당 구간을 다시 재생할 수 있도록 만들 계획입니다. 출시 전에는 결과 품질을 검증하고 개인정보처리방침을 갱신하겠습니다.</p>
+          <div class="flow-step">
+            <div class="top"><span class="num">03</span></div>
+            <h3 data-lang="en">Return to the source</h3><h3 data-lang="ko">원문으로 돌아가기</h3>
+            <p data-lang="en">Each note points to subtitle timestamps so you can replay the passage. Notes that cannot be matched to a real subtitle line are not shown.</p>
+            <p data-lang="ko">노트마다 자막 시점이 연결되어 해당 구간을 다시 재생할 수 있습니다. 실제 자막 줄과 맞지 않는 노트는 보여 주지 않습니다.</p>
           </div>
         </div>
+        <p class="meta" data-lang="en">Status (October 2026): a working prototype sends selected transcript text to the Claude API (Claude Haiku 5.5) and checks every note against the original subtitles. It is not in the app yet. Before release we will test it on more real transcripts, measure quality, and update our privacy policy.</p>
+        <p class="meta" data-lang="ko">현재 상태(2026년 10월): 선택한 자막 텍스트를 Claude API(Claude Haiku 5.5)로 보내고, 모든 노트를 원래 자막과 대조해 검증하는 시제품이 동작합니다. 아직 앱에는 넣지 않았습니다. 출시 전에 더 많은 실제 자막으로 시험하고, 품질을 측정하고, 개인정보처리방침을 갱신하겠습니다.</p>
       </div>
     </section>
   </main>
@@ -207,8 +242,8 @@
   <footer class="site-footer">
     <div class="wrap">
       <div>
-        <p data-lang="en"><strong>AnyToAny Studio</strong> (애니투애니 스튜디오) · Representative: Jihwan Eom</p>
-        <p data-lang="ko"><strong>애니투애니 스튜디오</strong> (AnyToAny Studio) · 대표: 엄지환</p>
+        <p data-lang="en"><strong>AnyToAny Studio</strong> (애니투애니 스튜디오) · Representative: Jihwan Eom · Business registration no. 359-03-03744</p>
+        <p data-lang="ko"><strong>애니투애니 스튜디오</strong> (AnyToAny Studio) · 대표: 엄지환 · 사업자등록번호: 359-03-03744</p>
         <p><a href="mailto:hello@anytoanystudio.com">hello@anytoanystudio.com</a></p>
         <p>© <span data-year>2026</span> AnyToAny Studio</p>
       </div>
