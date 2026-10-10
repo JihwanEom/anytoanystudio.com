@@ -159,7 +159,7 @@ em.serif, h1 em, .section-title em, .cta h2 em {
   -webkit-mask-image: radial-gradient(60% 60% at 70% 40%, #000, transparent 75%);
           mask-image: radial-gradient(60% 60% at 70% 40%, #000, transparent 75%);
 }
-.hero-grid { display: grid; grid-template-columns: 1.02fr 1fr; gap: 40px; align-items: center; }
+.hero-grid { display: grid; grid-template-columns: 1.12fr .88fr; gap: 40px; align-items: center; }
 
 .eyebrow {
   display: inline-flex; align-items: center; gap: 9px;
@@ -170,7 +170,7 @@ em.serif, h1 em, .section-title em, .cta h2 em {
 .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 4px var(--teal-soft); }
 
 h1 {
-  font-size: clamp(42px, 5.7vw, 74px); line-height: 1.04; letter-spacing: -.042em;
+  font-size: clamp(40px, 4.4vw, 60px); line-height: 1.06; letter-spacing: -.04em;
   font-weight: 700; margin: 24px 0 24px;
 }
 h1 em { font-size: 1.08em; line-height: .9; }
