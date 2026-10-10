@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AnyToAny Studio — Turn what you watch into what you learn</title>
-  <meta name="description" content="AnyToAny Studio is a software studio in South Korea, founded in March 2026. We build SubLive, an iPhone app that creates and translates subtitles on-device. Transcript study notes with Claude are in development.">
+  <meta name="description" content="AnyToAny Studio is a software studio in South Korea, founded in March 2026. We build SubLive, an iPhone app that creates and translates subtitles on-device, with opt-in study notes powered by the Claude API.">
   <meta property="og:title" content="AnyToAny Studio">
-  <meta property="og:description" content="Apps for understanding and learning from video. Meet SubLive, our on-device subtitle app for iPhone, in development.">
+  <meta property="og:description" content="Apps for understanding and learning from video. Meet SubLive: on-device subtitles for iPhone, with study notes powered by Claude. In development.">
   <meta property="og:url" content="https://anytoanystudio.com/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://anytoanystudio.com/assets/screen-welcome.webp">
@@ -96,7 +96,7 @@
           <div class="fact"><b>40</b><span data-lang="en">speech-recognition language variants</span><span data-lang="ko">음성 인식 언어·지역</span></div>
           <div class="fact"><b>21</b><span data-lang="en">interface languages</span><span data-lang="ko">인터페이스 언어</span></div>
           <div class="fact"><b data-lang="en">On-device</b><b data-lang="ko">온디바이스</b><span data-lang="en">speech recognition and translation</span><span data-lang="ko">음성 인식과 번역</span></div>
-          <div class="fact"><b>Claude Code</b><span data-lang="en">how we build SubLive</span><span data-lang="ko">SubLive 개발 도구</span></div>
+          <div class="fact"><b>Claude</b><span data-lang="en">Claude Code to build, Claude API for study notes</span><span data-lang="ko">Claude Code로 개발, Claude API로 학습 노트</span></div>
         </div>
       </div>
     </section>
@@ -176,8 +176,8 @@
           <span class="kicker" data-lang="ko">시청에서 학습까지</span>
           <h2 class="section-title" data-lang="en">One video, <em>three steps.</em></h2>
           <h2 class="section-title" data-lang="ko">영상 하나, <span class="ink-grad">세 단계.</span></h2>
-          <p class="section-sub" data-lang="en">The first two steps work today in our development build. The third is what we are building next with Claude.</p>
-          <p class="section-sub" data-lang="ko">앞의 두 단계는 지금 개발 빌드에서 동작합니다. 세 번째 단계는 Claude로 다음에 만들 기능입니다.</p>
+          <p class="section-sub" data-lang="en">All three steps work today in our development build. The third uses the Claude API.</p>
+          <p class="section-sub" data-lang="ko">세 단계 모두 지금 개발 빌드에서 동작합니다. 세 번째 단계는 Claude API를 사용합니다.</p>
         </div>
         <div class="flow reveal">
           <div class="flow-step">
@@ -193,13 +193,72 @@
             <p data-lang="ko">Apple 온디바이스 음성 인식과 번역으로 시점이 맞는, 읽기 좋은 자막을 만듭니다.</p>
           </div>
           <div class="flow-step next">
-            <div class="top"><span class="num">03</span><span class="chip" data-lang="en">Next · with Claude</span><span class="chip" data-lang="ko">다음 단계 · Claude</span></div>
+            <div class="top"><span class="num">03</span><span class="chip chip-soft" data-lang="en">Dev build · Claude API</span><span class="chip chip-soft" data-lang="ko">개발 빌드 · Claude API</span></div>
             <h3 data-lang="en">A study note worth keeping</h3><h3 data-lang="ko">다시 꺼내 보는 학습 노트</h3>
-            <p data-lang="en">Opt-in summaries and vocabulary explained in context, each linked to the subtitle line it came from. Only selected transcript text is sent, never audio or video. Working prototype on the Claude API; not in the app yet.</p>
-            <p data-lang="ko">선택형 요약과 문맥 속 어휘 설명을 원래 자막 줄에 연결합니다. 선택한 자막 텍스트만 보내고 음성·영상은 보내지 않습니다. Claude API 시제품이 동작하며, 아직 앱에는 없습니다.</p>
+            <p data-lang="en">Opt-in summaries and vocabulary explained in context, each linked to the subtitle line it came from. Only the video's subtitle text is sent, never audio or video.</p>
+            <p data-lang="ko">선택형 요약과 문맥 속 어휘 설명을 원래 자막 줄에 연결합니다. 영상의 자막 텍스트만 보내고 음성·영상은 보내지 않습니다.</p>
           </div>
         </div>
-        <a class="flow-link" href="sublive/#roadmap"><span data-lang="en">Read the plan</span><span data-lang="ko">개발 계획 보기</span> →</a>
+      </div>
+    </section>
+
+    <!-- Study Notes (Claude) -->
+    <section id="study-notes">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker" data-lang="en">Study Notes · Claude API</span>
+          <span class="kicker" data-lang="ko">학습 노트 · Claude API</span>
+          <h2 class="section-title" data-lang="en">From a talk to notes <em>you can replay.</em></h2>
+          <h2 class="section-title" data-lang="ko">영상 한 편이, <span class="ink-grad">다시 볼 수 있는 노트로.</span></h2>
+          <p class="section-sub" data-lang="en">Open the player menu, review exactly what will be sent, and SubLive asks Claude for a summary and vocabulary notes. Every item links to the subtitle where it appears, so one tap takes you back to that moment.</p>
+          <p class="section-sub" data-lang="ko">플레이어 메뉴에서 학습 노트를 열고, 보낼 내용을 확인하면 SubLive가 Claude로 요약과 어휘 노트를 만듭니다. 모든 항목이 해당 자막에 연결되어, 한 번 누르면 그 장면으로 돌아갑니다.</p>
+        </div>
+
+        <div class="showcase reveal">
+          <div>
+            <ul class="check-list" data-lang="en">
+              <li>Off by default; you review the lines and characters before anything is sent</li>
+              <li>Only subtitle text leaves the device, never audio or video</li>
+              <li>Claude Haiku 5.5 via our server, so no API key ships in the app</li>
+              <li>Notes that do not match a real subtitle line are dropped, not shown</li>
+            </ul>
+            <ul class="check-list" data-lang="ko">
+              <li>기본값은 꺼짐, 보내기 전에 자막 줄 수와 글자 수를 확인</li>
+              <li>기기 밖으로 나가는 것은 자막 텍스트뿐, 음성·영상은 보내지 않음</li>
+              <li>자체 서버를 거쳐 Claude Haiku 5.5 호출, 앱에는 API 키가 없음</li>
+              <li>실제 자막 줄과 맞지 않는 노트는 보여 주지 않음</li>
+            </ul>
+            <p class="meta" data-lang="en">Status (October 2026): working in our development build. Tested end to end with a 35-minute Korean talk (639 subtitle lines → English notes). Not yet released on the App Store.</p>
+            <p class="meta" data-lang="ko">현재 상태(2026년 10월): 개발 빌드에서 동작합니다. 35분 한국어 발표(자막 639줄 → 영어 노트)로 전 과정을 시험했습니다. 아직 App Store에 출시하지 않았습니다.</p>
+          </div>
+
+          <div class="rail-wrap">
+            <div class="rail" tabindex="0" aria-label="Study Notes screens">
+              <figure class="shot">
+                <div class="device"><img src="assets/screen-notes-menu.webp" width="600" height="1304" alt="Player menu with the Study Notes item" loading="lazy"></div>
+                <figcaption><b><span class="n">1</span><span data-lang="en">Open Study Notes</span><span data-lang="ko">학습 노트 열기</span></b><span data-lang="en">From the player menu</span><span data-lang="ko">플레이어 메뉴에서</span></figcaption>
+              </figure>
+              <figure class="shot">
+                <div class="device"><img src="assets/screen-notes-consent.webp" width="600" height="1304" alt="Review screen showing 639 subtitle lines and 15,979 characters will be sent; audio and video are not sent" loading="lazy"></div>
+                <figcaption><b><span class="n">2</span><span data-lang="en">Review and agree</span><span data-lang="ko">확인하고 동의</span></b><span data-lang="en">See what will be sent</span><span data-lang="ko">보낼 내용을 먼저 확인</span></figcaption>
+              </figure>
+              <figure class="shot">
+                <div class="device"><img src="assets/screen-notes-summary.webp" width="600" height="1304" alt="Summary points with timestamp buttons" loading="lazy"></div>
+                <figcaption><b><span class="n">3</span><span data-lang="en">Summary with timestamps</span><span data-lang="ko">시점이 붙은 요약</span></b><span data-lang="en">Tap to replay a moment</span><span data-lang="ko">누르면 그 장면으로</span></figcaption>
+              </figure>
+              <figure class="shot">
+                <div class="device"><img src="assets/screen-notes-vocab.webp" width="600" height="1304" alt="Vocabulary note explaining a term from the talk" loading="lazy"></div>
+                <figcaption><b><span class="n">4</span><span data-lang="en">Vocabulary in context</span><span data-lang="ko">문맥 속 어휘</span></b><span data-lang="en">Quoted from the subtitle</span><span data-lang="ko">원래 자막을 함께 표시</span></figcaption>
+              </figure>
+              <figure class="shot">
+                <div class="device"><img src="assets/screen-player.webp" width="600" height="1304" alt="Player jumped to the linked moment with subtitles" loading="lazy"></div>
+                <figcaption><b><span class="n">5</span><span data-lang="en">Back to the source</span><span data-lang="ko">원래 장면으로</span></b><span data-lang="en">With live subtitles</span><span data-lang="ko">자막과 함께 재생</span></figcaption>
+              </figure>
+            </div>
+            <p class="rail-note" data-lang="en">Screens from the SubLive development build (iOS Simulator), October 2026. The talk is a public video by our founder.</p>
+            <p class="rail-note" data-lang="ko">SubLive 개발 빌드 화면(iOS 시뮬레이터), 2026년 10월. 영상은 창업자가 공개한 발표입니다.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -248,8 +307,8 @@
           <div class="prose">
             <p data-lang="en">AnyToAny Studio was founded by <strong>Jihwan Eom</strong> on March 1, 2026, as a bootstrapped sole proprietorship in South Korea. SubLive is our first product. It is in development and has not launched on the App Store yet.</p>
             <p data-lang="ko"><strong>엄지환</strong>이 2026년 3월 1일 대한민국에서 개업한 1인 개인사업자로, 외부 투자 없이 운영합니다. 첫 제품 SubLive는 개발 중이며 아직 App Store에 출시하지 않았습니다.</p>
-            <p data-lang="en">We build SubLive with <strong>Claude Code</strong>. The app itself currently uses Apple's on-device speech recognition and translation and does not call the Claude API. Our next feature, transcript study notes, is being built on the Claude API.</p>
-            <p data-lang="ko">SubLive는 <strong>Claude Code</strong>로 개발합니다. 현재 앱은 Apple 온디바이스 음성 인식과 번역을 사용하며 Claude API는 호출하지 않습니다. 다음 기능인 자막 학습 노트를 Claude API로 만들고 있습니다.</p>
+            <p data-lang="en">We build SubLive with <strong>Claude Code</strong>. Subtitles and translation run on-device with Apple's frameworks. The optional <strong>Study Notes</strong> feature calls the <strong>Claude API</strong> through our own server; it works in our development build and is not released yet.</p>
+            <p data-lang="ko">SubLive는 <strong>Claude Code</strong>로 개발합니다. 자막과 번역은 Apple 프레임워크로 기기에서 처리합니다. 선택 기능인 <strong>학습 노트</strong>는 자체 서버를 거쳐 <strong>Claude API</strong>를 호출하며, 개발 빌드에서 동작하고 아직 출시하지 않았습니다.</p>
             <p><a href="https://www.linkedin.com/in/jihwan-eom-%E2%80%8D-84b351212/"><span data-lang="en">Meet the founder on LinkedIn</span><span data-lang="ko">LinkedIn에서 창업자 보기</span> →</a></p>
           </div>
           <div class="facts-card">
